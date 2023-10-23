@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237); 
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: #b7e1f5; 
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .radio {
+            margin-left: 45%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 20px;
+            height: 20px;
+            justify-items: center;
+        }
+
+        button {
+            background-color: #e867ec; 
+        }
+    </style>
+
+    <h1>30</h1>
+    <p id="um">Os botões de opção permitem escolher apenas uma opção de um grupo de opções. Clique em cada um dos botõe para descobrir qual deles faz o botão continuar aparecer. (Observe que apenas um será selecionado por vez.)</p>
+    <div class="radio">
+        <input type="radio" id="azul" name="cor" onchange="mudarCorFundo('#b3e0ff')"/> 
+        <label for="azul">azul</label>
+
+        <input type="radio" id="vermelho" name="cor" onchange="mudarCorFundo('#ff99a7')"/>
+        <label for="vermelho">vermelho</label>
+
+        <input type="radio" id="verde" name="cor" onchange="mudarCorFundo('#a5d4a6')"/> 
+        <label for="verde">verde</label>
+
+        <input type="radio" id="amarelo" name="cor" onchange="mudarCorFundo('#f4d190')"/>
+        <label for="amarelo">amarelo</label>
+
+        <input type="radio" id="laranja" name="cor" onchange="mudarCorFundo('#f6b89f')"/> 
+        <label for="laranja">laranja</label>
+
+        <input type="radio" id="roxo" name="cor" onchange="mudarCorFundo('#b28fff')"/> 
+        <label for="roxo">roxo</label>
+
+        <input type="radio" id="rosa" name="cor" onchange="mudarCorFundo('#ffb8e7'); mostrarBotao()"/> 
+        <label for="rosa">rosa</label>
+
+        <button id="botaoRosa" style="display: none" onclick="irParaProximaPagina()">Próximo</button>
+    </div>
+
+    <script>
+         function mudarCorFundo(cor) {
+            document.body.style.backgroundColor = cor;
+        }
+       
+        function selecionar() {
+            var um = document.getElementById("azul").checked;
+            var dois = document.getElementById("vermelho").checked;
+            var tres = document.getElementById("verde").checked;
+            var quatro = document.getElementById("amarelo").checked;
+            var cinco = document.getElementById("laranja").checked;
+            var seis = document.getElementById("roxo").checked;
+            var sete = document.getElementById("rosa").checked;
+         }
+            
+            // Agora você tem variáveis distintas para cada caixa de seleção.
+        
+            if (um && dois && tres && quatro && cinco && seis && sete ) {
+                // Se todas as caixas de seleção estiverem marcadas, o código dentro deste bloco será executado.
+                document.getElementById('botaoRosa').style.display = 'block'
+            }
+  
+            
+        
+            function mostrarBotao() {
+        var rosaChecked = document.getElementById("rosa").checked;
+        var botaoRosa = document.getElementById('botaoRosa');
+        
+        if (rosaChecked) {
+            botaoRosa.style.display = 'block';
+        } else {
+            botaoRosa.style.display = 'none';
+        }
+    }
+
+    function irParaProximaPagina() {
+        // This function redirects the browser to the '32.html' page when called.
+        window.location.href = '32.html';}
+        let contador = 0
+           const html = document.querySelector("html")
+           html.addEventListener("click", contarclicks)
+           function contarclicks() {
+               contador++
+               localStorage.setItem("click29", contador)
+           }
+        </script>
+          
+   
+</body>
+</html>
+
+
+
+
+

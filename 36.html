@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        #dia {
+            width: 200px;
+            height: 30px;
+        }
+
+        button {
+            background-color: rgb(16, 138, 237) ;
+            margin-top: 1%;
+        }
+    </style>
+    <h1>35</h1>
+    <p id="um">Selecione "seis" na caixa de listagem suspensa e clique no botão 'Continuar'.</p>
+
+    <select id="dia" onchange="toggleButton()">
+        <option value="um">um</option>
+        <option value="dois">dois</option>
+        <option value="tres">tres</option>
+        <option value="quatro">quatro</option>
+        <option id="cinco" value="cinco">cinco</option>
+        <option value="seis">seis</option>
+        <option value="sete">sete</option>
+    </select>
+
+    <a href="37.html" id="continuarLink" style="display: none;">
+        <button>Continuar</button>
+    </a>
+
+    <script>
+        function toggleButton() {
+            var diaSelect = document.getElementById("dia");
+            var continuarLink = document.getElementById("continuarLink");
+
+            if (diaSelect.value === "seis") {
+                continuarLink.style.display = "block";
+            } else {
+                continuarLink.style.display = "none";
+            }
+        }
+
+        let contador = 0
+           const html = document.querySelector("html")
+           html.addEventListener("click", contarclicks)
+           function contarclicks() {
+               contador++
+               localStorage.setItem("click34", contador)
+           }
+    </script>
+</body>
+</html>

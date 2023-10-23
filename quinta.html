@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           
+            background-color: rgb(183, 225, 245);
+            
+        }
+        h1 {
+        height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+
+      }
+        .elementos1 {
+            display: block;
+            font-size: 20px;
+        }
+        #invisivel1 {
+            
+            margin-top: 200px;
+        }
+        #texto{
+            margin-left: 1600px;
+            margin-top: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>04</h1>
+    <div class="elementos1">
+       
+        <p id="texto">Clique no número.</p>
+        <div id="invisivel1" onclick="tornarInvisivel1()" >
+            <a href="sexta.html">4</a></div>
+    </div>
+ 
+
+        
+        
+
+    <script>
+       
+     
+    
+    let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click4", contador)
+        }
+
+       
+    </script>
+</body>
+</html>

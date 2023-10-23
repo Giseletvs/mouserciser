@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #ola {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .checkbox {
+            display: grid;
+            width: 20px;
+            height: 20px;
+            grid-template-columns: 1fr 1fr;
+         
+        }
+
+        #botaoProximo {
+            display: none;
+            background-color: rgb(169, 170, 238);
+            color: white;
+            margin-top: 20%;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <h1 id="ola">28</h1>
+    <p id="um">As caixas de seleção permitem selecionar uma ou mais opções de um grupo de opções. Clique dentro de cada uma das caixas de seleção brancas abaixo para continuar.</p>
+    <div class="checkbox">
+        <input type="checkbox" id="umCheckbox" onchange="verificarSelecoes()"/>
+        <label for="umCheckbox">um</label>
+
+        <input type="checkbox" id="doisCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">dois</label>
+
+        <input type="checkbox" id="tresCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">tres</label>
+
+        <input type="checkbox" id="quatroCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">quatro</label>
+
+        <input type="checkbox" id="cincoCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">cinco</label>
+
+        <input type="checkbox" id="seisCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">seis</label>
+
+        <input type="checkbox" id="seteCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">sete</label>
+
+        <input type="checkbox" id="oitoCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">oito</label>
+
+        <input type="checkbox" id="noveCheckbox" onchange="verificarSelecoes()"/>
+        <label for="doisCheckbox">nove</label>
+
+
+      
+    </div>
+
+    <button id="botaoProximo" onclick="irParaProximaPagina()">Próximo</button>
+
+    
+    <script>
+        function verificarSelecoes() {
+            var um = document.getElementById("umCheckbox").checked;
+            var dois = document.getElementById("doisCheckbox").checked;
+            var tres = document.getElementById("tresCheckbox").checked;
+            var quatro = document.getElementById("quatroCheckbox").checked;
+            var cinco = document.getElementById("cincoCheckbox").checked;
+            var seis = document.getElementById("seisCheckbox").checked;
+            var sete = document.getElementById("seteCheckbox").checked;
+            var oito = document.getElementById("oitoCheckbox").checked;
+            var nove = document.getElementById("noveCheckbox").checked;
+        
+            // Agora você tem variáveis distintas para cada caixa de seleção.
+        
+            if (um && dois && tres && quatro && cinco && seis && sete && oito && nove) {
+                // Se todas as caixas de seleção estiverem marcadas, o código dentro deste bloco será executado.
+                document.getElementById('botaoProximo').style.display = 'block';
+            }
+        }
+        
+        function irParaProximaPagina() {
+            // Esta função redireciona o navegador para a página '31.html' quando chamada.
+            window.location.href = '31.html';
+        }
+
+        let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click27", contador)
+        }
+        </script>
+        
+</body>
+</html>

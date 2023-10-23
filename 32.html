@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+        .radio {
+            margin-left: 45%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 30px;
+            height: 30px;
+            margin-left: 30%;
+            font-size: 20px;
+            
+        }
+        img {
+            margin-left: 55%;
+            width: 200px;
+            height: 300px;
+            display: none; 
+        }
+
+        button {
+            margin-top: 10%;
+            background-color: rgb(110, 162, 235);
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>31</h1>
+    <p id="um">Escolha um filme nos botões de opção abaixo e clique no botão ‘Continuar’.</p>
+
+    <div class="radio">
+        <input type="radio" id="jasmine" name="cor" onchange="showImage('img1')">
+        <label for="jasmine">Aladin</label>
+        
+        <input type="radio" id="elementos" name="cor" onchange="showImage('img2')">
+        <label for="elementos">Elementos</label>
+        
+        <input type="radio" id="WiFi.Ralph" name="cor" onchange="showImage('img3')">
+        <label for="WiFi.Ralph">WiFi_Ralph</label>
+        
+        <input type="radio" id="encanto" name="cor" onchange="showImage('img4')">
+        <label for="encanto">Encanto</label>
+    </div>
+
+    <img id="img1" src="aladin.jpg" alt="">
+    <img id="img2" src="elementos.webp" alt="">
+    <img id="img3" src="WiFi_Ralph.jpg" alt="">
+    <img id="img4" src="encanto.jfif" alt="">
+    
+    <a href="33.html">
+        <button id="continuar" style="display: none">continuar</button></a>
+
+    <script>
+        function showImage(imageId) {
+          
+            var images = document.querySelectorAll('img');
+            for (var i = 0; i < images.length; i++) {
+                images[i].style.display = 'none';
+            }
+
+           
+            var selectedImage = document.getElementById(imageId);
+            selectedImage.style.display = 'block';
+            var continuarButton = document.getElementById('continuar');
+    continuarButton.style.display = 'block';
+
+        }
+        let contador = 0
+           const html = document.querySelector("html")
+           html.addEventListener("click", contarclicks)
+           function contarclicks() {
+               contador++
+               localStorage.setItem("click30", contador)
+           }
+
+      
+       
+    </script>
+</body>
+</html>
+

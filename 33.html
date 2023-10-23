@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        #dia {
+            width: 200px;
+            height: 30px;
+        }
+
+        #continuar {
+
+            display: none; 
+            margin-left: 45%;
+            margin-top: 2%;
+            background-color: rgb(144, 144, 248);
+        }
+    </style>
+    <h1>32</h1>
+    <p id="um">A pequena caixa branca abaixo é uma caixa de lista suspensa. Clique na seta triangular preta à direita para abrir a lista de opções e, a seguir, clique na opção desejada. Selecione o dia de hoje na caixa de listagem suspensa.</p>
+
+    <select id="dia"> 
+        <option value="" disabled selected> selecione o dia</option>
+        <option value="domingo">Domingo</option>
+        <option value="segunda">Segunda</option>
+        <option value="terça">Terça</option>
+        <option value="quarta">Quarta</option>
+        <option value="quinta">Quinta</option>
+        <option value="sexta">Sexta</option>
+        <option value="sabado">Sábado</option>
+    </select>
+    <a href="34.html">
+    <button id="continuar">Continuar</button></a>
+
+    <script>
+        function setDiaAtual() {
+            const dataAtual = new Date();
+            const diaSemana = dataAtual.getDay();
+            const selectDia = document.getElementById("dia");
+
+           
+            selectDia.selectedIndex = diaSemana;
+
+           
+            if (selectDia.value === getDiaSemana(diaSemana)) {
+                document.getElementById("continuar").style.display = "block"; 
+                document.getElementById("continuar").style.display = "none"; 
+            }
+        }
+
+       
+        function getDiaSemana(index) {
+            const diasSemana = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sabado"];
+            return diasSemana[index];
+        }
+
+        setDiaAtual();
+
+       
+        const selectDia = document.getElementById("dia");
+        selectDia.addEventListener("change", function () {
+            const diaSelecionado = selectDia.value;
+            if (diaSelecionado === getDiaSemana(new Date().getDay())) {
+                document.getElementById("continuar").style.display = "block";
+            } else {
+                document.getElementById("continuar").style.display = "none";
+            }
+        });
+
+        let contador = 0
+           const html = document.querySelector("html")
+           html.addEventListener("click", contarclicks)
+           function contarclicks() {
+               contador++
+               localStorage.setItem("click31", contador)
+           }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           
+            background-color: rgb(183, 225, 245);
+            
+        }
+        h1 {
+        height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+
+      }
+        #invisivel1 {
+            display: block;
+            font-size: 20px;
+        }
+        .elementos1 {
+            text-align: center;
+        }
+        .numeros {
+            display: grid;
+            width: 60px;
+            height: 60px;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            background-color: aliceblue;
+            margin-top: 30px;
+            margin-left: 95%;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>13</h1>
+    <div class="elementos1">
+        <p>Clique no número 11 abaixo para continuar. Tenha cuidado para não clicar nos 3 ao redor, ou você será enviado de volta à página 5!</p>
+        <p>(Dica: quando o cursor do mouse mudar para o formato de uma mão, coloque a ponta do dedo no meio do link no qual deseja clicar)</p>
+       <div class="numeros">
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div>  
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div> 
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div> 
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div> 
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="15.html">13</a></div>
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div>  
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div> 
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div> 
+                <div  onclick="tornarInvisivel1()" >
+                    <a href="terceira.html">2</a></div> 
+
+            </div>
+    </div>
+ 
+
+        
+        
+
+    <script>
+        function tornarInvisivel1() { 
+            var elemento = document.getElementById("elementos1");
+            elemento.style.display = "none";
+         }
+         let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click13", contador)
+        }
+
+       
+    </script>
+</body>
+</html>

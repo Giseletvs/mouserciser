@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>23</title>
+<style>
+h1 {
+    height: 70px;
+    width: auto;
+    background-color: rgb(16, 138, 237);
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+body {
+    background-color: rgb(183, 225, 245);
+}
+</style>
+</head>
+<body>
+<h1>22</h1>
+<p>As caixas de mensagens são mensagens curtas que o computador coloca na tela para alertá-lo sobre informações importantes ou para fazer perguntas antes de realizar uma tarefa.</p>
+<p>Quando uma caixa de mensagem aparecer, você deverá ler a mensagem ou pergunta e responder clicando no botão apropriado na caixa de mensagem.</p>
+<p>Clique no link abaixo para exibir uma caixa de mensagem, leia a mensagem e clique no botão apropriado na caixa.</p>
+<a href="24.html" id="link">Clique aqui</a>
+<p id="demo"></p>
+<script>
+document.getElementById("link").onclick = function() {
+  var r = confirm("Muito bem, vamos para a próxima página. Clique em 'OK' para prosseguir.");
+  if (r == true) {
+   
+    window.location.href = "24.html";
+  } else {
+    
+    document.getElementById("demo").innerHTML = "Você pressionou Cancelar!";
+  }
+};
+
+let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click21", contador)
+        }
+</script>
+</body>
+</html>
+

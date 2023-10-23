@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            text-align: center;
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+        }
+        
+        #image1 {
+            height: 200px;
+            width: 200px;
+        }
+        
+        #image2 {
+            display: none;
+            height: 200px;
+            width: 200px;
+        }
+        #um {
+            display: none;
+            background-color: rgb(168, 168, 228)
+        }
+
+        </style>
+    
+    <h1>21</h1>
+    
+    <img id="image1" src="pascal-removebg-preview.png" alt="">
+    <img id="image2" src="pascal02-removebg-preview.png" alt="">
+    
+    <a href="23.html">
+        <button id="um">vamos lá!</button>
+    </a>
+    <script>
+    var image1 = document.getElementById('image1');
+    var image2 = document.getElementById('image2');
+    var um = document.getElementById('um');
+    var clicks = 0;
+    
+    image1.addEventListener('click', function () {
+        clicks++;
+        document.addEventListener('dblclick', function() {
+            clicks++;
+            if (clicks % 2 === 0) {
+                image1.style.display = 'none';
+                image2.style.display = 'block';
+                um.style.display = 'block';
+
+            } else {
+                image1.style.display = 'none';
+                image2.style.display = 'block';
+            }
+        });
+    });
+
+    let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click20", contador)
+        }
+    
+    </script>
+</body>
+</html>
+
+

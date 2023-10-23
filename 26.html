@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ola {
+        height: 70px;
+        width: auto;
+        background-color: rgb(16, 138, 237);
+        margin-top: -10px;
+        margin-left: -10px;
+        margin-right: -10px;
+}
+
+        body {
+           
+        background-color: rgb(183, 225, 245);
+        text-align: center;
+}
+    img {
+        width: 200px;
+        margin-left: 90%;
+    }
+    .imagem {
+        background-color: bisque;
+    }
+    #link {
+        margin-left: 101%;
+        margin-right: 5%;
+    }
+       
+        
+
+    </style>
+</head>
+<body>
+    <h1 id="ola">25</h1>
+    <div class="imagem">
+    <img  src="lilo-removebg-preview.png" alt="">
+    <a id="link" href="27.html">proximo!</a>
+</div>
+
+
+<script>
+    let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click24", contador)
+        }
+</script>
+    
+</body>
+</html>

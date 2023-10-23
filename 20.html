@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        body {
+
+           
+
+            background-color: rgb(183, 225, 245);
+
+           
+
+        }
+
+        .elementos1 {
+
+            display: grid;
+
+            font-size: 20px;
+
+            text-align: center;
+
+           
+
+        }
+
+        #invisivel1 {
+
+            background-color: azure;
+
+            border: 10%;
+
+            font-size: 18px;
+
+        }
+
+        .imagens {
+
+            display: grid;
+
+            margin-top: 6%;
+
+            margin-left: 30%;
+
+            height: 50px;
+
+            width: 50px;
+
+            grid-template-rows:  1fr 1fr;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+            grid-gap: 10px;
+
+ 
+
+         
+
+           
+
+        }
+
+      h1 {
+
+            height: 70px;
+            width: auto;
+            background-color:  rgb(16, 138, 237);;
+
+            margin-top: -10px;
+
+            margin-left: -10px;
+
+            margin-right: -10px;
+
+           
+
+ 
+
+      }
+
+      #b1 {
+
+        background-color: rgb(56, 126, 246);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+       
+
+      }
+
+      #b2 {
+
+        background-color: rgb(225, 137, 237);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+     
+
+      }
+
+      #b3 {
+
+ 
+
+      background-color: rgb(229, 205, 127);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+       
+
+       
+
+      }
+
+      #b3 {
+
+ 
+
+        background-color: rgb(235, 120, 120);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+}
+
+ 
+
+        #b4 {
+
+ 
+
+        background-color: rgb(82, 246, 139);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+}
+
+        #b5 {
+
+ 
+
+        background-color: rgb(197, 54, 157);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+}
+
+        #b6 {
+
+ 
+
+        background-color: rgb(201, 128, 227);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+}
+
+        #b7 {
+
+ 
+
+        background-color: rgb(226, 30, 99);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+}
+
+ 
+
+        #b8 {
+
+ 
+
+        background-color: rgb(93, 72, 212);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+        }
+
+ 
+
+        #b9 {
+
+ 
+
+        background-color: rgb(187, 180, 57);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+        }
+
+ 
+
+        #b10 {
+
+ 
+
+        background-color: rgb(255, 0, 0);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+        }
+
+        #b11 {
+
+ 
+
+        background-color: rgb(31, 9, 103);
+
+        border-radius: 50%;
+
+        height: 20px;
+
+        width: 20px;
+
+ 
+
+ 
+
+        }
+
+ 
+
+        img {
+
+            width: 30px;
+
+            height: 30px;
+
+           
+
+        }
+
+         #imagem1 {
+
+            display: none;
+
+         }
+
+         #imagem2 {
+
+            display: none;
+           
+         }
+
+ 
+
+         #imagem3 {
+
+            display: none;
+
+         }
+
+         #imagem4 {
+
+            display: none;
+
+         }
+         #imagem5 {
+
+        display: none;
+
+}
+        #imagem6 {
+
+        display: none;
+
+        }#imagem7 {
+
+        display: none;
+
+        }#imagem8 {
+
+        display: none;
+
+        }
+        #imagem9 {
+
+        display: none;
+
+        }#imagem10 {
+
+        display: none;
+
+        }#imagem11 {
+
+        display: none;
+
+        }
+        #proximo {
+            margin-top: 2%;
+            margin-left: 50%;
+            display: none;
+            background-color: rgb(36, 131, 255);
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>19</h1>
+
+    <div class="elementos1">
+
+     
+
+        <p>As imagens também podem ser clicáveis. Imagens clicáveis geralmente fazem com que o cursor do mouse mude para o formato de “mão” quando o cursor se move sobre a imagem.</p>
+
+        <div class="imagens">
+
+            <button id="b1"></button>
+            <button id="b2"></button>
+            <button id="b3"></button>
+            <button id="b4"></button>
+            <button id="b5"></button>
+            <button id="b6"></button>
+            <button id="b7"></button>
+            <button id="b8"></button>
+            <button id="b9"></button>
+            <button id="b10"></button>
+            <button id="b11"></button>
+
+        
+
+            <img id="imagem1" src="confere1.png">
+
+            <img id="imagem2" src="confere1.png">
+
+            <img id="imagem3" src="confere1.png">
+
+            <img id="imagem4" src="confere1.png">
+
+            <img id="imagem5" src="confere2.png">
+
+            <img id="imagem6" src="confere1.png">
+
+            <img id="imagem7" src="confere1.png">
+
+            <img id="imagem8" src="confere1.png">
+
+            <img id="imagem9" src="confere1.png">          
+
+            <img id="imagem10" src="confere1.png">
+
+            <img id="imagem11" src="confere1.png">
+
+        
+
+        </div>
+        <a href="21.html">
+        <button id="proximo">proximo</button></a>
+        
+        <script>
+            const botao1 = document.getElementById("b1");
+            const botao2 = document.getElementById("b2");
+            const botao3 = document.getElementById("b3");
+            const botao4 = document.getElementById("b4");
+            const botao5 = document.getElementById("b5");
+            const botao6 = document.getElementById("b6");
+            const botao7 = document.getElementById("b7");
+            const botao8 = document.getElementById("b8");
+            const botao9 = document.getElementById("b9");
+            const botao10 = document.getElementById("b10");
+            const botao11 = document.getElementById("b11");
+        
+            const imagem1 = document.getElementById("imagem1");
+            const imagem2 = document.getElementById("imagem2");
+            const imagem3 = document.getElementById("imagem3");
+            const imagem4 = document.getElementById("imagem4");
+            const imagem5 = document.getElementById("imagem5");
+            const imagem6 = document.getElementById("imagem6");
+            const imagem7 = document.getElementById("imagem7");
+            const imagem8 = document.getElementById("imagem8");
+            const imagem9 = document.getElementById("imagem9");
+            const imagem10 = document.getElementById("imagem10");
+            const imagem11 = document.getElementById("imagem11");
+        
+            const proximo = document.getElementById("proximo");
+            const botoes = [botao1, botao2, botao3, botao4, botao5, botao6, botao7, botao8, botao9, botao10, botao11];
+            let botaoClicado = 0;
+        
+            function checkButtonsClicked() {
+                botaoClicado++;
+                if (botaoClicado === botoes.length) {
+                    proximo.style.display = "block";
+                }
+            }
+        
+            botoes.forEach((botao, index) => {
+                botao.addEventListener("click", function () {
+                    checkButtonsClicked();
+                    this.style.display = "none";
+                    switch (index) {
+                        case 0:
+                            imagem1.style.display = "block";
+                            break;
+                        case 1:
+                            imagem2.style.display = "block";
+                            break;
+                        case 2:
+                            imagem3.style.display = "block";
+                            break;
+                        case 3:
+                            imagem4.style.display = "block";
+                            break;
+                        case 4:
+                            imagem5.style.display = "block";
+                            break;
+                        case 5:
+                            imagem6.style.display = "block";
+                            break;
+                        case 6:
+                            imagem7.style.display = "block";
+                            break;
+                        case 7:
+                            imagem8.style.display = "block";
+                            break;
+                        case 8:
+                            imagem9.style.display = "block";
+                            break;
+                        case 9:
+                            imagem10.style.display = "block";
+                            break;
+                        case 10:
+                            imagem11.style.display = "block";
+                            break;
+                    }
+                });
+            });
+       
+    </script>
+
+</body>
+
+</html>
+

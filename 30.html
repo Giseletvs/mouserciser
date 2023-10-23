@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ola {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+            position: relative;
+            z-index: 2; /* Valor maior que outros elementos */
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Valor intermediário */
+        }
+
+        #ariel, #Linguado, #sebastiao {
+            position: relative;
+            z-index: 3; /* Valor maior que #ola */
+        }
+
+        #cenario {
+            margin-left: 2%;
+            position: relative;
+            z-index: 0; /* Valor menor que outros elementos para ficar embaixo */
+        }
+
+        .descricao {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .checkbox {
+            margin-left: 5%;
+            font-size: 25px;
+            display: grid;
+            width: 20px;
+            height: 20px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #iimage {
+            display: none;
+            max-width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #ariel {
+            width: 100px;
+            margin-bottom: 20%;
+        }
+        #Linguado {
+            width: 50px;
+            margin-bottom: 30%;
+        }
+
+        #sebastiao {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ola">29</h1>
+    <p class="descricao">Selecione uma ou mais opções nas caixas de seleção abaixo e clique no botão ‘Continuar’</p>
+    <p class="descricao">Escolha:</p>
+    <div class="checkbox">
+        <input type="checkbox" id="ariel2" onchange="mostrarImagem()"/>
+        <label for="ariel">Ariel</label>
+
+        <input type="checkbox" id="sebastiao2" onchange="mostrarImagem()"/>
+        <label for="sebastiao2">Sebastião</label>
+
+        <input type="checkbox" id="linguado2" onchange="mostrarImagem()"/>
+        <label for="linguado2">Linguado</label>
+    </div>
+    <div class="mar">
+        <img id="cenario" src="cenario.jpg">
+    </div>
+
+    <img id="ariel" src="Ariel_disney-removebg-preview.png">
+    <img id="Linguado" src="peixe-removebg-preview.png">
+    <img id="sebastiao" src="sepastiannn-removebg-preview.png">
+    
+    <a href="31.html"> <button id="proximo-button" onclick="continuarClick()">Próximo</button></a>
+
+    <script>
+           let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click28", contador)
+        }
+        
+    </script>
+</body>
+</html>
+

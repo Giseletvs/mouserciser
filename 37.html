@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        /* Estilos CSS existentes */
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        .text {
+            margin-left: 35%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 400px;
+        }
+
+        button {
+            background-color: rgb(16, 138, 237);
+        }
+    </style>
+</head>
+<body>
+    <h1>36</h1>
+    <p id="um">As finas caixas brancas abaixo são caixas de texto. Clique na primeira caixa com o mouse e digite seu primeiro nome. Em seguida, clique dentro da segunda caixa e digite seu sobrenome. Quando terminar, clique no botão 'Enviar'.</p>
+    <div class="text">
+        <label for="firstName">Primeiro nome:</label>
+        <input type="text" id="firstName">
+
+        <label for="lastName">Sobrenome:</label>
+        <input type="text" id="lastName">
+    </div>
+
+    <button id="submitButton">Enviar</button>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function() {
+            // Captura os valores dos campos de entrada
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+            // Redireciona para outra página e envia os valores via parâmetros de URL
+            window.location.href = "final.html?firstName=" + firstName + "&lastName=" + lastName;
+        });
+        let contador = 0
+           const html = document.querySelector("html")
+           html.addEventListener("click", contarclicks)
+           function contarclicks() {
+               contador++
+               localStorage.setItem("click35", contador)
+           }
+    </script>
+</body>
+</html>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+
+        #mes {
+            width: 200px;
+            height: 30px;
+        }
+
+        #continuar {
+            display: none; 
+            margin-left: 45%;
+            margin-top: 2%;
+            background-color: rgb(144, 144, 248);
+        }
+    </style>
+    <h1>32</h1>
+    <p id="um">A pequena caixa branca abaixo é uma caixa de lista suspensa. Clique na seta triangular preta à direita para abrir a lista de opções e, a seguir, clique na opção desejada. Selecione o mês atual na caixa de listagem suspensa.</p>
+
+    <select id="mes">
+        <option value="" disabled selected> selecione o mes</option>
+        <option value="janeiro">Janeiro</option>
+        <option value="fevereiro">Fevereiro</option>
+        <option value="marco">Março</option>
+        <option value="abril">Abril</option>
+        <option value="maio">Maio</option>
+        <option value="junho">Junho</option>
+        <option value="julho">Julho</option>
+        <option value="agosto">Agosto</option>
+        <option value="setembro">Setembro</option>
+        <option value="outubro">Outubro</option>
+        <option value="novembro">Novembro</option>
+        <option value="dezembro">Dezembro</option>
+    </select>
+    <a href="36.html">
+        <button id="continuar">Continuar</button>
+    </a>
+
+    <script>
+        function setMesAtual() {
+            const dataAtual = new Date();
+            const mesAtual = dataAtual.getMonth();
+            const selectMes = document.getElementById("mes");
+
+            selectMes.selectedIndex = mesAtual;
+
+            if (selectMes.value === getMesAtual(mesAtual)) {
+                document.getElementById("continuar").style.display = "block";
+                document.getElementById("continuar").style.display = "none"; 
+            }
+        }
+
+        function getMesAtual(index) {
+            const meses = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+            return meses[index];
+        }
+
+        setMesAtual();
+
+        const selectMes = document.getElementById("mes");
+        selectMes.addEventListener("change", function () {
+            const mesSelecionado = selectMes.value;
+            if (mesSelecionado === getMesAtual(new Date().getMonth())) {
+                document.getElementById("continuar").style.display = "block";
+            } else {
+                document.getElementById("continuar").style.display = "none";
+            }
+        });
+        const selectDia = document.getElementById("mes");
+        selectDia.addEventListener("change", function () {
+            const mesSelecionado = selectMes.value;
+            if (mesSelecionado === getMesAtual(new Date().getMesAtual())) {
+                document.getElementById("continuar").style.display = "block";
+            } else {
+                document.getElementById("continuar").style.display = "none";
+            }
+        });
+
+        let contador = 0
+           const html = document.querySelector("html")
+           html.addEventListener("click", contarclicks)
+           function contarclicks() {
+               contador++
+               localStorage.setItem("click33", contador)
+           }
+    </script>
+</body>
+</html>

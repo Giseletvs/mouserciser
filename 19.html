@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           
+            background-color: rgb(183, 225, 245);
+            
+        }
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+
+      }
+        .elementos1 {
+            display: block;
+            font-size: 20px;
+            text-align: center;
+        }
+        #invisivel1 {
+            background-color: azure;
+            border: 10%;
+            font-size: 18px;
+        }
+        .imagens {
+            display: grid;
+            margin-top: 6%;
+            margin-left: 30%;
+            height: 50px;
+            width: 50px;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+      
+        #gif1 {
+            height: 150px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>18</h1>
+    <div class="elementos1">
+        <p>As imagens também podem ser clicáveis. Imagens clicáveis ​​geralmente fazem com que o cursor do mouse mude para o formato de “mão” quando o cursor se move sobre a imagem.</p>
+        <div class="imagens">
+            <img id="gif1" src="rapunzel2.gif" >
+            <img id="gif1" src="cachorinho.gif" >
+            <img id="gif1" src="moana.gif" >
+            <img id="gif1" src="rato.gif" >
+            <img id="gif1" src="jacare.gif" >
+            <a href="22.html">
+                <img id="gif1" src="sininho.gif">
+                </a>
+
+
+
+            
+
+        </div>
+           
+        </button>
+ 
+
+        
+        
+
+    <script>
+        function tornarInvisivel1() { 
+            var elemento = document.getElementById("elementos1");
+            elemento.style.display = "none";
+         }
+
+         let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click18", contador)
+        }
+
+       
+    </script>
+</body>
+</html>

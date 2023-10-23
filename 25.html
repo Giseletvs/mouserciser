@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ola {
+        height: 70px;
+        width: auto;
+        background-color: rgb(16, 138, 237);
+        margin-top: -10px;
+        margin-left: -10px;
+        margin-right: -10px;
+}
+
+        body {
+           
+        background-color: rgb(183, 225, 245);
+        text-align: center;
+}
+        .texto {
+            margin-left: 30%;
+            text-align: center;
+            width: 700px;
+            border-style:solid;
+            background-color: rgb(118, 120, 242);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        #rapunzel {
+            width: 200px;
+        }
+        #link {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 20px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1 id="ola">24</h1>
+    <p id="um">Agora use a barra de rolagem para chegar ao final desta página.</p>
+<div class="texto">
+    <h1>Indicação de filme</h1>
+    <h2>SINOPSE:</h2>
+    <h3>STITCH!</h3>
+        Stitch, Jumba e Pleakley vão morar com Lilo e Nani no Havaí, onde formam uma grande família. O que ninguém sabe é que Jumba trouxe com ele para o planeta Terra suas outras 625 experiências. Por isso, o ex-capitão Gantu é contratado por um terrível doutor que deseja saber a localização desses outros mutantes. Jumba, então, é capturado e interrogado, e cabe à Lilo e Stitch conseguirem libertá-lo. Mas, no meio da confusão, eles acabam ativando dois experimentos, que atrapalham ainda mais a missão dos dois amigos.</p>
+    <img src="stitch.png" alt="">
+    <h3>ENROLADOS</h3>
+    <P>A Walt Disney Pictures apresenta Enrolados, uma comédia de animação musical com muita ação sobre uma menina com mágicos cabelos dourados de mais de 21 metros de comprimento. Rapunzel, a princesa que foi raptada do castelo de seus pais quando bebê (voz de Mandy Moore) é mantida presa em uma torre e sonha com aventuras. Agora uma adolescente determinada e criativa, ela realiza uma fuga de arrepiar os cabelos com ajuda de um ousado bandido (voz de Zachary Levi). Com o segredo de sua linhagem pesando na balança e seu captor em seu encalço, Rapunzel e seu amigo encontram aventura, emoção, humor e cabelos... muitos cabelos. Com exibição em 3D.</P>
+    <img id="rapunzel" src="Rapunzel_.webp" alt="">
+    </div>
+
+
+    <a id="link" href="26.html">vamos lá!</a>
+
+    <script>
+        let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click23", contador)
+        }
+    </script>
+</body>
+</html>

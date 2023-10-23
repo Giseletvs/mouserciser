@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+           
+            background-color: rgb(183, 225, 245);
+            
+        }
+        h1 {
+        height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+
+      }
+        #invisivel1 {
+            display: block;
+            font-size: 20px;
+        }
+        img {
+            height: 200px;
+            margin-top: 20%;
+            margin-left: 70%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>01 </h1>
+
+    <div class="elementos1">
+        
+        <p>Clique no número  abaixo.</p>
+        <div id="invisivel1" onclick="tornarInvisivel1()" >
+            <a href="terceira.html" onclick="incrementarContador()">1</a></div>
+
+    </div>
+
+    <script>
+        let contador = 0
+        const html = document.querySelector("html")
+        html.addEventListener("click", contarclicks)
+        function contarclicks() {
+            contador++
+            localStorage.setItem("click1", contador)
+        }
+        </script>
+</body>
+</html>

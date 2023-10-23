@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        // Verifique se o localStorage tem um contador para esta página
+        const pageURL = window.location.href;
+        let clickCount = localStorage.getItem(pageURL);
+    
+        // Se não houver contador, inicialize-o como 0
+        if (clickCount === null) {
+            clickCount = 0;
+            localStorage.setItem(pageURL, clickCount);
+        }
+    
+        // Exiba o contador atual
+        const counterElement = document.createElement('p');
+        counterElement.textContent = `Cliques nesta página: ${clickCount}`;
+        document.body.appendChild(counterElement);
+    
+        // Adicione um evento de clique ao botão
+        const button = document.getElementById('botao');
+        button.addEventListener('click', function () {
+            // Atualize o contador e armazene no localStorage
+            clickCount++;
+            localStorage.setItem(pageURL, clickCount);
+    
+            // Atualize o texto exibido
+            counterElement.textContent = `Cliques nesta página: ${clickCount}`;
+        });
+    });</script>
+</body>
+</html>
+
+
+
+
+
+

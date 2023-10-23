@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+        h1 {
+            height: 70px;
+            width: auto;
+            background-color: rgb(16, 138, 237);
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        body {
+            background-color: rgb(183, 225, 245);
+            text-align: center;
+        }
+
+        #um {
+            margin-bottom: 2%;
+            margin-top: 2%;
+            font-size: 25px;
+        }
+        button {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(112, 89, 245);
+        }
+        img {
+            width: 300px;
+        }
+
+        
+        </style>
+        <h1>Fim!!!</h1>
+        <p id="um">muito bem!!!<span id="firstName"></span> <span id="lastName"></span> você completou todas as atividades!!</p>
+        <img src="ratinho-removebg-preview.png" alt="">
+        <p id="um">Clique em “Reiniciar” para iniciar o Mousercise novamente.</p>
+<a href="hhi.html">
+        <button>Reiniciar</button></a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Página</th>
+                    <th>Número de Cliques</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Página 1</td> 
+                    <td id="resultado"></td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário para outras páginas -->
+            </tbody>
+        </table>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function() {
+            
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+
+           
+            window.location.href = "38.html?firstName=" + firstName + "&lastName=" + lastName;
+        });
+
+         // Obter o valor do contador do localStorage
+         const contador = localStorage.getItem("contador");
+            
+            // Exibir o número de cliques realizados
+            const resultado = document.getElementById("resultado");
+            resultado.textContent = `${contador}`;
+    </script>
+</body>
+</html>
